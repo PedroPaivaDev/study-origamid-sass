@@ -1,0 +1,22 @@
+p {
+  color: black;
+}
+
+a {
+  display: block;
+  width: 200px;
+  height: 40px;
+}
+
+div {
+  background-color: #999;
+  height: 200px;
+  width: 100px;
+  color: antiquewhite;
+}
+div a {
+  color: pink;
+  background: blue;
+}
+
+/*# sourceMappingURL=style.css.map */

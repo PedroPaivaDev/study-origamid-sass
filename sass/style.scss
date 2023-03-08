@@ -1,0 +1,14 @@
+$preto: #999;
+@import 'colors';
+@import 'buttons';
+
+div {
+  background-color: $preto;
+  height: 200px;
+  width: 100px;
+  color: antiquewhite;
+  a {
+    color: pink;
+    background: blue;
+  }
+}
