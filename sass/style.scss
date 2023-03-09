@@ -1,4 +1,4 @@
-$primary: red;
+$primary: blue;
 $primary-font: monospace;
 $gutter: 20px;
 
@@ -7,28 +7,51 @@ section {
 	margin: 0 auto;
 }
 
-h1 {
-	color: $primary;
-	font-family: $primary-font;
-  margin-bottom: $gutter;
+.modal {
+	h1 {
+		color: $primary;
+		font-family: $primary-font;
+		margin-bottom: $gutter;
+	}
+	
+	p {
+		font: {
+			size: 1.2em;
+			family: $primary-font;
+			style: italic;
+		}
+		line-height: 1.4;
+		max-width: 400px;
+	}
+	
+	a {
+		display: block;
+		max-width: 120px;
+		padding: 10px;
+		border-radius: 4px;
+		text-align: center;
+		background: $primary;
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $primary-font;
+	}
 }
 
-p {
-	font-size: 1.2em;
-	line-height: 1.4;
-	max-width: 400px;
-	font-family: $primary-font;
-}
-
-a {
-	display: block;
-	max-width: 120px;
-	padding: 10px;
-	border-radius: 4px;
+ul {
 	text-align: center;
-	background: $primary;
-	color: white;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-family: $primary-font;
+	li {
+		display: inline-block;
+		list-style: none;
+		a {
+			display: block;
+			padding: 20px;
+			text-decoration: none;
+			background: $primary;
+			color: white;
+			&:hover, &.active {
+				background: pink;
+			}
+		}
+	}
 }
