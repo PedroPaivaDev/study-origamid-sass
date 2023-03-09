@@ -1,22 +1,32 @@
+section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: red;
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+
 p {
-  color: black;
+  font-size: 1.2em;
+  line-height: 1.4;
+  max-width: 400px;
+  font-family: monospace;
 }
 
 a {
   display: block;
-  width: 200px;
-  height: 40px;
-}
-
-div {
-  background-color: #999;
-  height: 200px;
-  width: 100px;
-  color: antiquewhite;
-}
-div a {
-  color: pink;
-  background: blue;
+  max-width: 120px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  background: red;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: monospace;
 }
 
 /*# sourceMappingURL=style.css.map */

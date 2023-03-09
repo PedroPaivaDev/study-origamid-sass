@@ -1,14 +1,34 @@
-$preto: #999;
-@import 'colors';
-@import 'buttons';
+$primary: red;
+$primary-font: monospace;
+$gutter: 20px;
 
-div {
-  background-color: $preto;
-  height: 200px;
-  width: 100px;
-  color: antiquewhite;
-  a {
-    color: pink;
-    background: blue;
-  }
+section {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: $primary;
+	font-family: $primary-font;
+  margin-bottom: $gutter;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.4;
+	max-width: 400px;
+	font-family: $primary-font;
+}
+
+a {
+	display: block;
+	max-width: 120px;
+	padding: 10px;
+	border-radius: 4px;
+	text-align: center;
+	background: $primary;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: $primary-font;
 }
