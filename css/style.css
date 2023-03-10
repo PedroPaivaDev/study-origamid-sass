@@ -1,12 +1,29 @@
 section {
   max-width: 600px;
   margin: 0 auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5), 10px 10px 0 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5), 10px 10px 0 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5), 10px 10px 0 0 rgba(0, 0, 0, 0.5);
 }
 
 .modal h1 {
   color: blue;
   font-family: monospace;
   margin-bottom: 20px;
+  font-size: 4em;
+  line-height: 1;
+  font-weight: bold;
+  font-family: monospace;
+}
+.modal h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: red;
 }
 .modal p {
   font-size: 1.2em;
@@ -14,6 +31,12 @@ section {
   font-style: italic;
   line-height: 1.4;
   max-width: 400px;
+}
+@media (max-width: 600px) {
+  .modal p {
+    color: pink;
+    font-size: 1em;
+  }
 }
 .modal a {
   display: block;
