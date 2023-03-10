@@ -1,3 +1,20 @@
+.erro, .button-erro {
+  color: red;
+  font-weight: bold;
+}
+
+.button-erro {
+  padding: 20px;
+  width: 200px;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+  height: 100px;
+}
+
 section {
   max-width: 600px;
   margin: 0 auto;

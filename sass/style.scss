@@ -37,7 +37,26 @@ $primary: blue;
 $primary-font: monospace;
 $gutter: 20px;
 
+.erro {
+	color: red;
+	font-weight: bold;
+}
+
+.button-erro {
+	@extend .erro;
+	padding: 20px;
+	width: 200px;
+}
+
+%clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+	height: 100px
+}
+
 section {
+	@extend %clearfix;
 	max-width: 600px;
 	margin: 0 auto;
 	@include border-box;
