@@ -33,6 +33,38 @@
 	}
 }
 
+@mixin type-1($size) {
+	font-family: monospace;
+	@if $size == 16 {
+		font-size: 1em;
+		font-weight: normal;
+	} @else if $size == 18 {
+		font-size: 1.25em;
+		font-weight: normal;
+	} @else if $size == 24 {
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+}
+
+$tema: desert;
+$primary-color: black;
+$secondary-color: gray;
+
+@if $tema == ocean {
+	$primary-color: blue;
+	$secondary-color: orange;
+} @else if $tema == desert {
+	$primary-color: yellow;
+	$secondary-color: purple;	
+}
+
+p {
+	color: $primary-color;
+	background-color: $secondary-color;
+	@include type-1(18);
+}
+
 $primary: blue;
 $primary-font: monospace;
 $gutter: 20px;
@@ -55,7 +87,32 @@ $gutter: 20px;
 	height: 100px
 }
 
+@mixin device($size) {
+	@if $size == mobile {
+		@media (max-width: 300px) {
+			@content;
+		}
+	}
+	@if $size == tablet {
+		@media (max-width: 600px) {
+			@content;
+		}
+	}
+	@if $size == desktop {
+		@media (max-width: 900px) {
+			@content;
+		}
+	}
+}
+
 section {
+	width: 100%;
+	@include device(tablet) {
+		width: 80%;
+	}
+	@include device(mobile) {
+		width: 60%;
+	}
 	@extend %clearfix;
 	max-width: 600px;
 	margin: 0 auto;

@@ -1,3 +1,11 @@
+p {
+  color: yellow;
+  background-color: purple;
+  font-family: monospace;
+  font-size: 1.25em;
+  font-weight: normal;
+}
+
 .erro, .button-erro {
   color: red;
   font-weight: bold;
@@ -16,6 +24,7 @@ section::after {
 }
 
 section {
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -24,6 +33,16 @@ section {
   box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5), 10px 10px 0 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5), 10px 10px 0 0 rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5), 10px 10px 0 0 rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 600px) {
+  section {
+    width: 80%;
+  }
+}
+@media (max-width: 300px) {
+  section {
+    width: 60%;
+  }
 }
 
 p {
