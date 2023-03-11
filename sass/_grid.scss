@@ -1,3 +1,15 @@
+@mixin device($size) {
+	@if $size == tablet {
+		@media only screen and (min-width: 768px) and (max-width: 959px) {
+			@content;
+		}
+	} @else if $size == mobile {
+		@media only screen and (max-width: 767px) {
+			@content;
+		}
+	}
+}
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
@@ -43,7 +55,7 @@ $columns: 16;
 	clear: both;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@include device(tablet) {
 	$container: 768;
 
 	@for $i from 1 through $columns {
@@ -62,7 +74,7 @@ $columns: 16;
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@include device(mobile) {
 	$container: 300;
 	%mobile {
 		width: $container + px;
