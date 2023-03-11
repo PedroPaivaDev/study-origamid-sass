@@ -46,7 +46,7 @@ section {
 }
 
 p {
-  width: 520px;
+  width: 554px;
 }
 
 .modal h1 {
@@ -83,7 +83,7 @@ p {
   padding: 10px;
   border-radius: 4px;
   text-align: center;
-  background: blue;
+  background: #6666ff;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -101,11 +101,19 @@ ul li a {
   display: block;
   padding: 20px;
   text-decoration: none;
-  background: blue;
+  background: rgba(0, 0, 255, 0.3);
   color: white;
 }
 ul li a:hover, ul li a.active {
   background: pink;
+}
+
+.teste {
+  font-size: 1.5em;
+}
+.teste p {
+  font-size: 0.75em;
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
