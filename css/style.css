@@ -749,6 +749,7 @@ img {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
+  line-height: 20px;
   letter-spacing: 0.1em;
 }
 
@@ -945,9 +946,9 @@ img {
 }
 
 .footer_contato ul li {
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
-  font-family: Georgia, "Times New Roman", serif;
 }
 
 .footer_redes ul li {
@@ -1032,6 +1033,7 @@ img {
 .missao_sobre ul li {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
+  line-height: 25px;
   line-height: 30px;
 }
 
@@ -1094,6 +1096,7 @@ img {
   background: #fec63e;
   text-transform: uppercase;
   font-size: 18px;
+  line-height: 25px;
   line-height: 20px;
   font-weight: bold;
   float: left;
@@ -1149,8 +1152,9 @@ img {
   padding: 7px 10px;
   margin-bottom: 10px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .form textarea {
@@ -1163,8 +1167,9 @@ img {
   padding: 7px 10px;
   margin-bottom: 20px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .form button {
@@ -1186,9 +1191,10 @@ img {
 
 .orcamento_dados span {
   display: block;
-  font-size: 18px;
-  line-height: 30px;
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 25px;
+  line-height: 30px;
 }
 
 .orcamento_dados span:nth-of-type(2) {
@@ -1202,6 +1208,7 @@ img {
 .orcamento_dados ul li {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
+  line-height: 20px;
   padding: 10px 15px;
 }
 
@@ -1235,6 +1242,7 @@ img {
 
 .quote_clientes cite {
   font-size: 18px;
+  line-height: 25px;
   font-weight: bold;
   float: right;
   font-style: normal;
@@ -1314,10 +1322,10 @@ img {
 
 .contato_form label {
   display: block;
+  margin-bottom: 4px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 25px;
-  margin-bottom: 4px;
 }
 
 .contato_form input {
@@ -1328,8 +1336,9 @@ img {
   padding: 7px 10px;
   margin-bottom: 10px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contato_form textarea {
@@ -1341,8 +1350,9 @@ img {
   padding: 7px 10px;
   margin-bottom: 20px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .contato_form button {
@@ -1364,9 +1374,10 @@ img {
 
 .contato_dados span {
   display: block;
-  font-size: 18px;
-  line-height: 30px;
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 25px;
+  line-height: 30px;
 }
 
 .contato_dados span:nth-of-type(even) {
@@ -1492,7 +1503,7 @@ img {
   }
   .missao_sobre ul li {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 20px;
   }
   /*Produtos*/
   .produto_item h2 {
