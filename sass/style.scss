@@ -50,6 +50,19 @@
 $tema: desert;
 $primary-color: black;
 $secondary-color: gray;
+$primary: blue;
+$primary-font: monospace;
+
+$container: 960;
+$gutter: 20;
+$columns: 12;
+
+@for $i from 1 through $columns {
+	$width: $container / $columns * $i - $gutter;
+	.grid-#{$i} {
+		width: $width + px;
+	}
+}
 
 @if $tema == ocean {
 	$primary-color: blue;
@@ -64,10 +77,6 @@ p {
 	background-color: $secondary-color;
 	@include type-1(18);
 }
-
-$primary: blue;
-$primary-font: monospace;
-$gutter: 20px;
 
 .erro {
 	color: red;
@@ -191,5 +200,22 @@ ul {
 	p {
 		font-size: em(18 ,24);
 		width: grid(6);
+	}
+}
+
+$i: 1;
+
+@while $i <= 6 {
+	.type-#{$i} {
+		font-size: 16 * $i + px;
+	}
+	$i: $i + 1;
+}
+
+$redes: facebook twitter pinterest instagram;
+
+@each $rede in $redes {
+	.#{$rede}-icon {
+		background-image: url('../img/#{$rede}.png');
 	}
 }
