@@ -700,11 +700,11 @@ img {
 }
 
 .header_menu ul li a:hover {
-  color: #FFF;
+  color: #fff;
 }
 
 .header_menu ul li a.menu_ativo {
-  color: #FFF;
+  color: #fff;
 }
 
 /* Introdução */
@@ -720,7 +720,7 @@ img {
 
 .introducao h1 {
   font-size: 48px;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
 }
