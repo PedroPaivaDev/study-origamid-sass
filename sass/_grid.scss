@@ -1,9 +1,9 @@
 // Variáveis do grid
 $cols: 12;
 $gutter: 20px;
-$l-device: 1200px;
-$m-device: 760px;
-$s-device: 480px;
+$lg-device: 1200px;
+$md-device: 760px;
+$sm-device: 480px;
 
 // Box-sizing
 *, *::after, *::before {
@@ -11,36 +11,74 @@ $s-device: 480px;
 }
 
 // Mixin de media-querie
-@mixin d($size) {
-  @if $size == l {
-    @media (min-width: #{$l-device}) {
+@mixin device($size) {
+  @if $size == lg {
+    @media screen and (min-width: #{$lg-device}) {
       @content;
     }
-  } @else if $size == m {
-    @media (min-width: #{$m-device}) and (max-width: #{$l-device - 1}) {
+  } @else if $size == md {
+    @media screen and (min-width: #{$md-device}) and (max-width: #{$lg-device - 1}) {
       @content;
     }
-  } @else if $size == s {
-    @media (max-width: #{$m-device - 1}) {
+  } @else if $size == sm {
+    @media screen and (max-width: #{$md-device - 1}) {
       @content;
     }
   }
 }
 
-p {
-  color: blue;
-  @include d(m) {
-    color: pink;
+// Função do grid
+@function grid($col, $offset: false) {
+  $width: $col / $cols * 100 + "%";
+  $result: calc(#{$width} - #{$gutter});
+  @if $offset == offset {
+    $gutter: $gutter / 2;
+    $result: calc(#{$width} + #{$gutter});
   }
-  @include d(s) {
-    color: aqua;
+  @return $result;
+}
+
+// Gera as classes de grid
+@for $i from 1 through $cols {
+  .grid-#{$i} {
+    width: grid($i);
   }
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: blue;
+// Mixin estrutura do grid
+@mixin grid-structure {
+  float: left;
+  min-width: 1px;
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  @include device(sm) {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+[class^="grid-"] {
+  @include grid-structure;
+}
+
+// Gera as classes de offset
+@for $i from 1 through $cols {
+  .offset-#{$i} {
+    margin-left: grid($i, offset);
+    @extend %offset;
+  }
+}
+
+@include device(sm) {
+  %offset {
+    margin-left: 0px;
+  }
+}
+
+// Mixin de clearfix
+@mixin clearfix {
   &::after, &::before {
     content: '';
     display: table;
@@ -48,11 +86,21 @@ p {
   }
 }
 
-.grid-3 {
-  width: calc(25% - 20px);
-  margin-left: 10px;
-  margin-right: 10px;
-  background: rgba(0,0,0,.5);
-  color: white;
-  float: left;
+@mixin container {
+  max-width: $lg-device;
+  margin: 0 auto;
+  position: relative;
+  @include device(md) {
+    max-width: $md-device;
+  }
+  @include device(sm) {
+    max-width: $sm-device;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @include clearfix;
+}
+
+.container {
+  @include container;
 }
