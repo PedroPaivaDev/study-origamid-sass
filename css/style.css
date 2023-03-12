@@ -114,8 +114,8 @@ table {
   [class^=grid-] {
     width: 100%;
     float: none;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -176,6 +176,7 @@ table {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  background-color: gray;
 }
 @media screen and (min-width: 760px) and (max-width: 1199px) {
   .container {
@@ -185,14 +186,37 @@ table {
 @media screen and (max-width: 759px) {
   .container {
     max-width: 480px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .container::after, .container::before {
   content: "";
   display: table;
   clear: both;
+}
+
+.row {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media screen and (max-width: 759px) {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.row::after, .row::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container div {
+  background-color: rgba(0, 0, 0, 0.4);
+  min-height: 50px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
