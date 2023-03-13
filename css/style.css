@@ -176,7 +176,6 @@ table {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  background-color: gray;
 }
 @media screen and (min-width: 760px) and (max-width: 1199px) {
   .container {
@@ -214,9 +213,17 @@ table {
 }
 
 .container div {
-  background-color: rgba(0, 0, 0, 0.4);
   min-height: 50px;
   margin-bottom: 10px;
+}
+
+.bg-teste {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+div {
+  font-family: "Aref Ruqaa", serif;
+  font-family: "PT Mono", monospace;
 }
 
 /*# sourceMappingURL=style.css.map */

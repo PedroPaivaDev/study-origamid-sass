@@ -116,7 +116,6 @@ $sm-device: 480px;
 
 .container {
   @include container;
-  background-color: gray;
 }
 
 .row {
@@ -124,7 +123,10 @@ $sm-device: 480px;
 }
 
 .container div {
-  background-color: rgba(0,0,0,0.4);
   min-height: 50px;
   margin-bottom: 10px;
+}
+
+.bg-teste {
+  background-color: rgba(0,0,0,0.4);
 }
