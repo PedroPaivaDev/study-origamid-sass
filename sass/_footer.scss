@@ -1,0 +1,18 @@
+footer {
+  padding: 20px 0;
+  background: $color-quaternary;
+  @include box-shadow(0 0 0 10px $color-quaternary);
+  p {
+    color: $color-primary;
+    @include device(sm) {
+      text-align: center;
+    }
+  }
+  a img {
+    float: right;
+    @include device(sm) {
+      float: none;
+      margin: 20px auto;
+    }
+  }
+}
