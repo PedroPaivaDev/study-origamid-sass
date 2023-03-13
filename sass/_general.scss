@@ -2,4 +2,36 @@ body {
   background: $color-primary;
   border: 10px solid $color-secondary;
   color: $color-quaternary;
+  @include device(sm) {
+    border: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  @include type-1(18)
+}
+
+.titulo {
+  @include type-1(18);
+  text-transform: uppercase;
+  @include device(sm) {
+    margin-bottom: 40px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 70%;
+    float: right;
+    height: 2px;
+    background-color: $color-quaternary;
+    margin-top: 14px;
+    @include device(md) {
+      width: 60%;
+    }
+  }
 }
