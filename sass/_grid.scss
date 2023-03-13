@@ -122,11 +122,6 @@ $sm-device: 480px;
   @include row;
 }
 
-.container div {
-  min-height: 50px;
-  margin-bottom: 10px;
-}
-
 .bg-teste {
   background-color: rgba(0,0,0,0.4);
 }
